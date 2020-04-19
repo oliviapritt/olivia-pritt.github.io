@@ -1,0 +1,368 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #A5A5AF;
+}
+
+a {
+    color: white;
+    text-decoration: None;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    max-width: 90%;
+    background-image: linear-gradient(to left, #57BC90, #77C9D4);
+    border-radius: 25px;
+    padding: 15px;
+    height: 400px;
+    margin-top: 10px;
+    max-height: 80%;
+    box-shadow: 0 0 5px 2px #8a8a8a;
+}
+
+.main-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    height: auto;
+}
+
+#btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+
+.btn {
+    background-color: white;
+    color: #8B8B93;
+    border-radius: 10px;
+    width: auto;
+    min-width: 200px;
+    height: 60px;
+    border: None;
+    padding: 5px;
+    margin: 10px 5px;
+    outline: None;
+    box-shadow: 1px 0 3px 1px #608a94 ;
+    font-size: 1.75vw;
+    font-family: futura;
+}
+
+.btn:hover {
+    background-color: #57BC90;
+    color: white;
+}
+
+.btn.correct {
+    background-color: #344B3A;
+    color: white;
+}
+
+.btn.wrong {
+    background-color: #B22929;
+    color: white;
+}
+
+.btn.neutral {
+    background-color: #8B8B93;
+    color: #9E9EA7;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: lighter;
+    letter-spacing: .05em;
+    font-weight: 200;
+    font-size: 2vw;
+}
+
+#correct-answers {
+    margin-left: 5px;
+}
+
+.hide {
+    display: None;
+}
+
+#question-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 200px;
+    height: 60px;
+    background-color: gray;
+    color: white;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: lighter;
+    padding: 20px;
+    font-size: 1.8vw;
+    margin-top: 12px;
+    letter-spacing: .05em;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 70%;
+    text-align: center;
+    line-height: 2em;
+}
+
+#header-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: nowrap;
+    height: 100px;
+    max-height: 20%;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 20px;
+}
+
+@font-face {
+    font-family: 'Luminari';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Luminari'), url('Luminari-Regular.woff') format('woff');
+}
+
+#page-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    color: white;
+    font-family: 'Luminari';
+    font-size: 2vw;
+    letter-spacing: .1em;
+}
+
+#subtitle {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: lighter;
+    font-size: 1.2vw;
+    color: #DEDEDE;
+    letter-spacing: .05em;
+}
+
+.image-set {
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+    max-width: 40%;
+    justify-content: space-between;
+}
+
+.answer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 500px;
+    height: 90px;
+    color: white;
+    max-width: 95%;
+    background-image: linear-gradient(to left, #57BC90, #77C9D4);
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-weight: lighter;
+    padding: 2px;
+    font-size: 1.8vw;
+    margin-top: 12px;
+    font-weight: 200;
+    box-shadow: 0 0 5px 2px #8a8a8a;
+}
+
+.all {
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .sixth {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    h2 {
+        font-size: 2.7vw;
+    }
+    #subtitle {
+        font-size: 1.2vw;
+    }
+    .answer {
+        font-size: 2.5vw;
+    }
+    .fifth {
+        display: none;
+    }
+    .sixth {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    h2 {
+        font-size: 2.7vw;
+    }
+    #subtitle {
+        font-size: 1.2vw;
+    }
+    .answer {
+        font-size: 2.7vw;
+    }
+    .fourth {
+        display: none;
+    }
+    .fifth {
+        display: none;
+    }
+    .sixth {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    h2 {
+        font-size: 2.7vw;
+    }
+    #subtitle {
+        font-size: 1.2vw;
+    }
+    .fourth {
+        display: none;
+    }
+    .fifth {
+        display: none;
+    }
+    .sixth {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    h2 {
+        font-size: 2.7vw;
+    }
+    #subtitle {
+        font-size: 1.2vw;
+    }
+    .third {
+        display: none;
+    }
+    .fourth {
+        display: none;
+    }
+    .fifth {
+        display: none;
+    }
+    .sixth {
+        display: none;
+    }
+}
+
+@media (max-width: 666px) {
+    body {
+        min-height: 700px;
+    }
+    h2 {
+        font-size: 5.5vw;
+    }
+    .answer {
+        font-size: 3vw;
+        width: 340px;
+        line-height: 1.5em;
+    }
+    img {
+        height: 60px;
+        width: 40px;
+    }
+    #subtitle {
+        font-size: 2.2vw;
+    }
+    #header-bar {
+        margin-top: 2px;
+        margin-bottom: 5px;
+        position: absolute;
+        top: 0;
+        width: 90%;
+    }
+    .main-content {
+        height: auto;
+        margin-top: 110px;
+    }
+    .main-content2 {
+        height: auto;
+        margin-top: 110px;
+    }
+    #question-style {
+        padding: 10px;
+        font-size: 4.5vw;
+        line-height: 1.5em;
+    }
+    .btn {
+        font-size: 4vw;
+        margin: 5px;
+        height: 35px;
+        min-width: 250px;
+    }
+    #bottom {
+        font-size: 5vw;
+        position: fixed;
+        bottom: 5px;
+    }
+    #btn-grid {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .second {
+        display: none;
+    }
+    .third {
+        display: none;
+    }
+    .fourth {
+        display: none;
+    }
+    .fifth {
+        display: none;
+    }
+    .sixth {
+        display: none;
+    }
+}
